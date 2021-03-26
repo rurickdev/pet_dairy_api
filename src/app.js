@@ -6,6 +6,9 @@ const entry = require('./usecases/entry')
 // instanciamos nuestra app
 const app = express()
 
+// Permite a express entender json
+app.use(express.json())
+
 // el metodo get recibe la ruta y la funcion callback que se ejecuta
 // cuando se llega a ese endpoint
 app.get('/', (req, res) => {
